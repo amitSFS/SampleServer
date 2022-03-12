@@ -1,6 +1,17 @@
 const express = require('express');
 const xml = require("xml");
+const https = require('https');
+const path = require('path');
+const fs = require('fs');
+
 const app = express();
+
+const sslserver = https.createServer({
+key: fs.readFileSync(path.join(__dirname, 'cert', 'key.pem')),
+cert: fs.readFileSync(path.join(__dirname, 'cert', 'cert.pem'))
+}, app)
+
+sslserver.listen(443, () => console.log('Secure server on port 443---'))
 
 app.get('/', (req,res) => {
     let data = `<?xml version="1.0" encoding="UTF-8"?>`;
@@ -52,6 +63,6 @@ app.get('/', (req,res) => {
   
 });
 
-const port = process.env.PORT || 80;
+// const port = process.env.PORT || 80;
 
-app.listen(port, () => console.log(`Server is running on port ${port}...`))
+// app.listen(port, () => console.log(`Server is running on port ${port}...`))
