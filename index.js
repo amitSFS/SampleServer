@@ -49,8 +49,9 @@ app.get('/', (req,res) => {
   </MgmtTree>`;
   res.header("Content-Type", "application/xml");
   res.status(200).send(data);
+  
 });
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 80;
 
 app.listen(port, () => console.log(`Server is running on port ${port}...`))
