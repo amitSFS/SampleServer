@@ -7,11 +7,11 @@ const fs = require('fs');
 const app = express();
 
 const sslserver = https.createServer({
-key: fs.readFileSync(path.join(__dirname, 'cert', 'key.pem')),
-cert: fs.readFileSync(path.join(__dirname, 'cert', 'cert.pem'))
+key: fs.readFileSync(path.join(__dirname, 'cert', 'device-config.com.key')),
+cert: fs.readFileSync(path.join(__dirname, 'cert', 'device-config_com.crt'))
 }, app)
 
-sslserver.listen(443, () => console.log('Secure server on port 443---'))
+sslserver.listen(80, () => console.log('Secure server on port 80---'))
 
 app.get('/', (req,res) => {
     let data = `<?xml version="1.0" encoding="UTF-8"?>`;
