@@ -11,7 +11,7 @@ key: fs.readFileSync(path.join(__dirname, 'cert', 'device-config.com.key')),
 cert: fs.readFileSync(path.join(__dirname, 'cert', 'device-config_com.crt'))
 }, app)
 
-sslserver.listen(80, () => console.log('Secure server on port 80---'))
+sslserver.listen(3000, () => console.log('Secure server on port 3000---'))
 
 app.get('/', (req,res) => {
     let data = `<?xml version="1.0" encoding="UTF-8"?>`;
