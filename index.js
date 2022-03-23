@@ -30,7 +30,7 @@ app.get('/', (req,res) => {
              <NodeName>HomeSP</NodeName>
              <Node>
                 <NodeName>FriendlyName</NodeName>
-                <Value>HS20_T_Red</Value>
+                <Value>T_Red</Value>
              </Node>
              <Node>
                 <NodeName>FQDN</NodeName>
@@ -62,7 +62,7 @@ app.get('/', (req,res) => {
              <NodeName>HomeSP</NodeName>
              <Node>
                 <NodeName>FriendlyName</NodeName>
-                <Value>HS20_T_Green</Value>
+                <Value>T_Green</Value>
              </Node>
              <Node>
                 <NodeName>FQDN</NodeName>
@@ -94,7 +94,7 @@ app.get('/', (req,res) => {
              <NodeName>HomeSP</NodeName>
              <Node>
                 <NodeName>FriendlyName</NodeName>
-                <Value>HS20_T_BLUE</Value>
+                <Value>T_BLUE</Value>
              </Node>
              <Node>
                 <NodeName>FQDN</NodeName>
@@ -126,7 +126,7 @@ app.get('/', (req,res) => {
              <NodeName>HomeSP</NodeName>
              <Node>
                 <NodeName>FriendlyName</NodeName>
-                <Value>HS20_T_BLUE</Value>
+                <Value>T_BLUE</Value>
              </Node>
              <Node>
                 <NodeName>FQDN</NodeName>
