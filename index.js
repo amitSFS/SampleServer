@@ -14,7 +14,7 @@ cert: fs.readFileSync(path.join(__dirname, 'cert', 'device-config_com.crt'))
 sslserver.listen(443, () => console.log('Secure server on port 443---'))
 
 app.get('/', (req,res) => {
-   const credFile = fs.readFileSync("/home/ubuntu/SampleServer" + '/profile.xml', { encoding: 'utf8' })
+   const credFile = fs.readFileSync( __dirname + '/profile.xml', { encoding: 'utf8' })
 
    console.log('FILE', credFile, __dirname);
    res.header("Content-Type", "application/xml");
